@@ -3,10 +3,8 @@ Imports System.IO
 
 Public Class Solver
     Dim sheet(8, 8) As SudokuSquare
-    Dim upcount As Short
 
     Public Sub New()
-        Main.RichTextBox1.Text += "New Solver" & vbNewLine
         For i = 0 To 8
             For j = 0 To 8
                 sheet(i, j) = New SudokuSquare()
@@ -18,7 +16,6 @@ Public Class Solver
         ' start the solving process
         ' continue until no changes have been made
         ' after a pass
-        Main.RichTextBox1.Text += "Start called" & vbNewLine
         Dim changesMade As Boolean = True
 
         sheetInput()
@@ -36,7 +33,6 @@ Public Class Solver
 
     Public Sub sheetInput()
         ' gather input numbers from the form
-        Main.RichTextBox1.Text += "sheetInput called" & vbNewLine
 
         For i = 0 To 8
             For j = 0 To 8
@@ -72,7 +68,6 @@ Public Class Solver
 
     Public Sub displaySheet()
         ' output the actual numbers to the list of textboxes
-        Main.RichTextBox1.Text += "displaySheet called" & vbNewLine
         Dim counter As Short = 0
 
         For i = 0 To 8
@@ -86,8 +81,6 @@ Public Class Solver
     Public Sub updatePossibles(row As Short, column As Short, iActualNumber As Short)
         ' go through each row, column, and subdivision to determine which cells
         ' cannot contain the argument number
-        upcount += 1S
-        Main.RichTextBox1.Text += "updatePossibles called (" & upcount & ")" & vbNewLine
 
         If iActualNumber <> 0 Then
             Dim bitwiseNumber As Short = CShort(Math.Pow(2, iActualNumber - 1))
@@ -123,7 +116,6 @@ Public Class Solver
         ' scans over each cell in the sheet looking for
         ' cells that only have one possible number that
         ' could be the acutal number
-        Main.RichTextBox1.Text += "makePass called" & vbNewLine
         Dim changesMade As Boolean = False
         Dim bitwiseNumber As Short = 0
 

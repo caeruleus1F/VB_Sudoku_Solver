@@ -23,7 +23,6 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnSolve = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'btnSolve
@@ -35,20 +34,11 @@ Partial Class Main
         Me.btnSolve.Text = "Solve"
         Me.btnSolve.UseVisualStyleBackColor = True
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(287, 12)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(300, 268)
-        Me.RichTextBox1.TabIndex = 83
-        Me.RichTextBox1.Text = ""
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(602, 292)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.ClientSize = New System.Drawing.Size(275, 292)
         Me.Controls.Add(Me.btnSolve)
         Me.Name = "Main"
         Me.Text = "Sudoku Solver"
@@ -56,6 +46,5 @@ Partial Class Main
 
     End Sub
     Friend WithEvents btnSolve As System.Windows.Forms.Button
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
 
 End Class
